@@ -119,15 +119,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Is the restroom out of order?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="OutCat" id="ONo" value="OOONo">' +
+  						'<input type="radio" name="OutCat" id="ONo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="OutCat" id="OYes" value="OOOYes">' +
+  						'<input type="radio" name="OutCat" id="OYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="OutCat" id="OUnknown" value="OOOUnknown">' +
+  						'<input type="radio" name="OutCat" id="OUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
@@ -143,15 +143,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Does the restroom have sinks?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SNo" value="SinksNo">' +
+  						'<input type="radio" name="SinkCat" id="SNo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SYes" value="SinksYes">' +
+  						'<input type="radio" name="SinkCat" id="SYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SUnknown" value="SinksUnknown">' +
+  						'<input type="radio" name="SinkCat" id="SUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
@@ -160,15 +160,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Does the restroom have urinals?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="UriCat" id="UNo" value="UrinalNo">' +
+  						'<input type="radio" name="UriCat" id="UNo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="UriCat" id="UYes" value="UrinalYes">' +
+  						'<input type="radio" name="UriCat" id="UYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="UriCat" id="UUnknown" value="UrinalUnknown">' +
+  						'<input type="radio" name="UriCat" id="UUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
@@ -177,15 +177,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Does the restroom have diaper change stations?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DNo" value="DiaperNo">' +
+  						'<input type="radio" name="DiaCat" id="DNo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DYes" value="DiaperYes">' +
+  						'<input type="radio" name="DiaCat" id="DYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DUnknown" value="DiaperUnknown">' +
+  						'<input type="radio" name="DiaCat" id="DUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
@@ -194,15 +194,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Does the restroom have showers?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShNo" value="ShowerNo">' +
+  						'<input type="radio" name="ShoCat" id="ShNo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShYes" value="ShowerYes">' +
+  						'<input type="radio" name="ShoCat" id="ShYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShUnknown" value="ShowerUnknown">' +
+  						'<input type="radio" name="ShoCat" id="ShUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
@@ -211,15 +211,15 @@ function createFormPopup() {
   				'<fieldset>' +
   					'<legend>Is the restroom ADA accessible?</legend>' +
   					'<p>' +
-  						'<input type="radio" name="ADACat" id="ANo" value="ADANo">' +
+  						'<input type="radio" name="ADACat" id="ANo" value="No">' +
   						'No' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="ADACat" id="AYes" value="ADAYes">' +
+  						'<input type="radio" name="ADACat" id="AYes" value="Yes">' +
   						'Yes' +
   					'</p>' +
   					'<p>' +
-  						'<input type="radio" name="ADACat" id="AUnknown" value="ADAUnknown">' +
+  						'<input type="radio" name="ADACat" id="AUnknown" value="Unknown">' +
   						'Unknown' +
   					'</p>' +
   				'</fieldset>' +
