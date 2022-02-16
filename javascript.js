@@ -22,6 +22,7 @@ var url = "https://lafishergis.carto.com/api/v2/sql";
 var urlGeoJSON = url + "?format=GeoJSON&q=";
 // change the Query below by replacing lab_7_name with your table name
 var sqlQuery = "SELECT * FROM lafisher_l7_restrooms";
+
 function addPopup(feature, layer) {
     layer.bindPopup(
         "<b>" + feature.properties.restroomtype + "</b><br>" +
