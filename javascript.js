@@ -257,7 +257,7 @@ function createFormPopup() {
   				'</fieldset>' +
   			'</li>' +
         '<li>' +
-          '<input type="submit" id="submit">'
+          '<input type="Submit" id="submit">' +
         '</li>' +
   	 '</ul>' +
   	'</form>'
