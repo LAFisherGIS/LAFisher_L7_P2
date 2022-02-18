@@ -67,200 +67,73 @@ new L.Control.Draw({
 
 //Defines rules for spawning the popup from a created feature
 function createFormPopup() {
-    var popupContent =
-    '<form>' +
-  		'<h2>Please answer all which you can.</h2>' +
-  		'<ul>' +
-  		  '<li>' +
-  				'<fieldset>' +
-  					'<legend>What kind of restroom is it?</legend>' +
-  					'<p>' +
-  				    '<input type="radio" name="restroomCat" id="Portable" value="Portable">' +
-  				    'Port-O-John' +
-  	    		'</p>' +
-  			    '<p>' +
-  					  '<input type="radio" name="restroomCat" id="Latrine" value="Latrine">' +
-  				    'Outhouse/Latrine' +
-  			    '</p>' +
-  			    '<p>' +
-  						'<input type="radio" name="restroomCat" id="Building" value="Building">' +
-  						'Permanent Structure with Plumbing' +
-  				  '</p>' +
-   				'</fieldset>' +
-  		  '</li>' +
-  		  '<li>' +
-  				'<fieldset>' +
-  					'<legend>What gender does the restroom used serve?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="genderCat" id="All" value="All Gender">' +
-  						'All Gender' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="genderCat" id="W" value="Women">' +
-  						'Women' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="genderCat" id="M" value="Men">' +
-  						'Men' +
-  					'</p>' +
-  				'</fieldset>' +
-  		  '</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Usage Fee (enter 0.00 if no fee):</legend>' +
-  					'<p>' +
-  						'<input type="number" id="price">' +
-  						'USD' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<h3>Section</h3>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Is the restroom out of order?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="OutCat" id="ONo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="OutCat" id="OYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="OutCat" id="OUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Number of toilets + urinals in the restroom.</legend>' +
-  					'<input type="number" id="NToilets">' +
-  					'units' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Does the restroom have sinks?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SNo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="SinkCat" id="SUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Does the restroom have urinals?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="UriCat" id="UNo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="UriCat" id="UYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="UriCat" id="UUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Does the restroom have diaper change stations?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DNo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="DiaCat" id="DUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Does the restroom have showers?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShNo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="ShoCat" id="ShUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Is the restroom ADA accessible?</legend>' +
-  					'<p>' +
-  						'<input type="radio" name="ADACat" id="ANo" value="No">' +
-  						'No' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="ADACat" id="AYes" value="Yes">' +
-  						'Yes' +
-  					'</p>' +
-  					'<p>' +
-  						'<input type="radio" name="ADACat" id="AUnknown" value="Unknown">' +
-  						'Unknown' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Please describe any damage that needs repairs in the restroom.</legend>' +
-  					'<p>' +
-  						'<input type="text" name="Damage" id="Damage">' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Please describe any messes that need cleanup in the restroom.</legend>' +
-  					'<p>' +
-  						'<input type="text" name="Mess" id="Mess">' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Please describe any supply shortages that need restocking in the restroom.</legend>' +
-  					'<p>' +
-  						'<input type="text" name="Shortage" id="Shortage">' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-  			'<li>' +
-  				'<fieldset>' +
-  					'<legend>Date of update:</legend>' +
-  					'<p>' +
-  						'<input type="date" name="Date" id="Date">' +
-  					'</p>' +
-  				'</fieldset>' +
-  			'</li>' +
-        '<li>' +
-          '<input type="Submit" id="submit">' +
-        '</li>' +
-  	 '</ul>' +
-  	'</form>'
+  var popupContent =
+      '<form>' +
+        '<h3>Restroom Characteristics</h3><br>' +
+        '<label for="restCat">Type of restroom structure:</label><br>' +
+                  '<select id="restCat" name="restCat">' +
+                     '<option value="NA"></option>' +
+                     '<option value="portable">Port-O-John</option>' +
+                     '<option value="latrine">Latrine or outhouse</option>' +
+                     '<option value="building">Permanent structure with indoor plumbing</option>' +
+                  '</select><br>' +
+        '<label for="genderCat">Gender accessibility of restroom surveyed:</label><br>' +
+                  '<select id="genderCat" name="genderCat">' +
+                      '<option value="NA"></option>' +
+                      '<option value="allGender">All genders</option>' +
+                      '<option value="women">Women</option>' +
+                      '<option value="men">Men</option>' +
+                  '</select><br>' +
+        'Price of Admission (USD): ' + '<input type="number" id="price"><br>' +
+        '<label for="outCat">Is the restroom out of order?:</label><br>' +
+                  '<select id="outCat" name="outCat">' +
+                      '<option value="NA"></option>' +
+                      '<option value="unknown">Unknown</option>' +
+                      '<option value="no">No</option>' +
+                      '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        'Number of Toilets/Urinals: ' + '<input type="number" id="noToilets"><br>' +
+        '<label for="sinkCat">Does the bathroom have sinks?:</label><br>' +
+                  '<select id="sinkCat" name="sinkCat">' +
+                      '<option value="NA"></option>' +
+                      '<option value="unknown">Unknown</option>' +
+                      '<option value="no">No</option>' +
+                      '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        '<label for="uriCat">Does the bathroom have urinals?:</label><br>' +
+                  '<select id="uriCat" name="uriCat">' +
+                      '<option value="NA"></option>' +
+                      '<option value="unknown">Unknown</option>' +
+                      '<option value="no">No</option>' +
+                      '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        '<label for="diaCat">Does the bathroom have diaper change stations?:</label><br>' +
+                  '<select id="diaCat" name="diaCat">' +
+                    '<option value="NA"></option>' +
+                    '<option value="unknown">Unknown</option>' +
+                    '<option value="no">No</option>' +
+                    '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        '<label for="shoCat">Does the bathroom have showers?:</label><br>' +
+                  '<select id="shoCat" name="shoCat">' +
+                    '<option value="NA"></option>' +
+                    '<option value="unknown">Unknown</option>' +
+                    '<option value="no">No</option>' +
+                    '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        '<label for="adaCat">Does the bathroom have showers?:</label><br>' +
+                  '<select id="adaCat" name="adaCat">' +
+                    '<option value="NA"></option>' +
+                    '<option value="unknown">Unknown</option>' +
+                    '<option value="no">No</option>' +
+                    '<option value="yes">Yes</option>' +
+                  '</select><br>' +
+        'Items in Need of Repair: ' + '<input type="text" name="damage" id="damage"><br>' +
+        'Items in Need of Cleaning: ' + '<input type="text" name="mess" id="mess"><br>' +
+        'Items in Need of Restocking: ' + '<input type="text" name="shortage" id="shortage"><br>' +
+        'Date Updated: ' + '<input type="date" name="date" id="date"><br>' +
+        '<input type="button" value="Submit" id="submit">' +
+      '</form>'
     drawnItems.bindPopup(popupContent, {maxHeight: 650, minWidth:400}).openPopup();
 }
 
@@ -270,35 +143,25 @@ map.addEventListener("draw:created", function(e) {
     createFormPopup();
 });
 
-// based on the following link and experience with python: https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/
-function radioCheck(a) {
-  var target = document.getElementsByName(a);
-
-  for(i = 0; i < target.length; i++) {
-      if(target[i].checked)
-      return target[i].value;
-  }
-}
 
 //Prints inputted data into console after turning it into variables
 function setData(e) {
     if(e.target && e.target.id == "submit") {
       //I have no idea why, but the extra function call and console.log lines are the only thing that can make the full list actually get printed.
-        var whyareyoulikethis = radioCheck('restroomCat');
-        var restroomType = radioCheck('restroomCat');
-        var gender = radioCheck('genderCat');
+        var restroomType = document.getElementById('restCat').value;
+        var gender = document.getElementById('genderCat').value;
         var entryPrice = document.getElementById("price").value;
-        var outOfOrder = radioCheck("OutCat");
-        var noToilets = document.getElementById("NToilets").value;
-        var sinks = radioCheck("SinkCat");
-        var urinals = radioCheck("UriCat");
-        var diaperChange = radioCheck("DiaCat");
-        var showers = radioCheck("ShoCat");
-        var americanDA = radioCheck("ADACat");
-        var damages = document.getElementById("Damage").value;
-        var messes = document.getElementById("Mess").value;
-        var shortages = document.getElementById("Shortage").value;
-        var upDate = document.getElementById("Date").value;
+        var outOfOrder = document.getElementById("outCat").value;
+        var noToilets = document.getElementById("noToilets").value;
+        var sinks = document.getElementById("sinkCat").value;
+        var urinals = document.getElementById("uriCat").value;
+        var diaperChange = document.getElementById("diaCat").value;
+        var showers = document.getElementById("shoCat").value;
+        var americanDA = document.getElementById("adaCat").value;
+        var damages = document.getElementById("damage").value;
+        var messes = document.getElementById("mess").value;
+        var shortages = document.getElementById("shortage").value;
+        var upDate = document.getElementById("date").value;
         // For each drawn layer
         drawnItems.eachLayer(function(layer) {
 
