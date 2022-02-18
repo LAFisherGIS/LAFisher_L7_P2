@@ -70,6 +70,7 @@ function createFormPopup() {
   var popupContent =
       '<form>' +
         '<h3>Restroom Characteristics</h3><br>' +
+        //Thanks to Taylor for this. Somehow it fixed my nonsensical problems.
         '<label for="restCat">Type of restroom structure:</label><br>' +
                   '<select id="restCat" name="restCat">' +
                      '<option value="unknown">Unknown</option>' +
