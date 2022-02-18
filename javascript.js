@@ -72,14 +72,14 @@ function createFormPopup() {
         '<h3>Restroom Characteristics</h3><br>' +
         '<label for="restCat">Type of restroom structure:</label><br>' +
                   '<select id="restCat" name="restCat">' +
-                     '<option value="NA"></option>' +
+                     '<option value="unknown">Unknown</option>' +
                      '<option value="portable">Port-O-John</option>' +
                      '<option value="latrine">Latrine or outhouse</option>' +
                      '<option value="building">Permanent structure with indoor plumbing</option>' +
                   '</select><br>' +
         '<label for="genderCat">Gender accessibility of restroom surveyed:</label><br>' +
                   '<select id="genderCat" name="genderCat">' +
-                      '<option value="NA"></option>' +
+                      '<option value="unknown">Unknown</option>' +
                       '<option value="allGender">All genders</option>' +
                       '<option value="women">Women</option>' +
                       '<option value="men">Men</option>' +
@@ -87,7 +87,6 @@ function createFormPopup() {
         'Price of Admission (USD): ' + '<input type="number" id="price"><br>' +
         '<label for="outCat">Is the restroom out of order?:</label><br>' +
                   '<select id="outCat" name="outCat">' +
-                      '<option value="NA"></option>' +
                       '<option value="unknown">Unknown</option>' +
                       '<option value="no">No</option>' +
                       '<option value="yes">Yes</option>' +
@@ -95,35 +94,30 @@ function createFormPopup() {
         'Number of Toilets/Urinals: ' + '<input type="number" id="noToilets"><br>' +
         '<label for="sinkCat">Does the bathroom have sinks?:</label><br>' +
                   '<select id="sinkCat" name="sinkCat">' +
-                      '<option value="NA"></option>' +
                       '<option value="unknown">Unknown</option>' +
                       '<option value="no">No</option>' +
                       '<option value="yes">Yes</option>' +
                   '</select><br>' +
         '<label for="uriCat">Does the bathroom have urinals?:</label><br>' +
                   '<select id="uriCat" name="uriCat">' +
-                      '<option value="NA"></option>' +
                       '<option value="unknown">Unknown</option>' +
                       '<option value="no">No</option>' +
                       '<option value="yes">Yes</option>' +
                   '</select><br>' +
         '<label for="diaCat">Does the bathroom have diaper change stations?:</label><br>' +
                   '<select id="diaCat" name="diaCat">' +
-                    '<option value="NA"></option>' +
                     '<option value="unknown">Unknown</option>' +
                     '<option value="no">No</option>' +
                     '<option value="yes">Yes</option>' +
                   '</select><br>' +
         '<label for="shoCat">Does the bathroom have showers?:</label><br>' +
                   '<select id="shoCat" name="shoCat">' +
-                    '<option value="NA"></option>' +
                     '<option value="unknown">Unknown</option>' +
                     '<option value="no">No</option>' +
                     '<option value="yes">Yes</option>' +
                   '</select><br>' +
         '<label for="adaCat">Does the bathroom have showers?:</label><br>' +
                   '<select id="adaCat" name="adaCat">' +
-                    '<option value="NA"></option>' +
                     '<option value="unknown">Unknown</option>' +
                     '<option value="no">No</option>' +
                     '<option value="yes">Yes</option>' +
