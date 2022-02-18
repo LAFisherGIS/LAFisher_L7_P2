@@ -25,20 +25,20 @@ var sqlQuery = "SELECT * FROM lafisher_l7_restrooms";
 
 function addPopup(feature, layer) {
     layer.bindPopup(
-        "<b>" + feature.properties.restroomtype + "</b><br>" +
-        feature.properties.gendersurveyed + "</b><br>" +
-        feature.properties.entryprice + "</b><br>" +
-        feature.properties.outoforder + "</b><br>" +
-        feature.properties.toiletcount + "</b><br>" +
-        feature.properties.sinks + "</b><br>" +
-        feature.properties.urinals + "</b><br>" +
-        feature.properties.diaperchangestation + "</b><br>" +
-        feature.properties.showers + "</b><br>" +
-        feature.properties.ada + "</b><br>" +
-        feature.properties.damages + "</b><br>" +
-        feature.properties.messes + "</b><br>" +
-        feature.properties.supplyshortages + "</b><br>" +
-        feature.properties.updatedate
+        "<b>" + 'Restroom Type: ' + feature.properties.restroomtype + "</b><br>" +
+        'Restroom Gender: ' + feature.properties.gendersurveyed + "</b><br>" +
+        'Price in $: ' + feature.properties.entryprice + "</b><br>" +
+        'Out of Order: ' + feature.properties.outoforder + "</b><br>" +
+        'Toilet Count: ' + feature.properties.toiletcount + "</b><br>" +
+        'Sinks: ' + feature.properties.sinks + "</b><br>" +
+        'Urinals: ' + feature.properties.urinals + "</b><br>" +
+        'Diaper Change: ' + feature.properties.diaperchangestation + "</b><br>" +
+        'Showers: ' + feature.properties.showers + "</b><br>" +
+        'ADA Compliance: ' + feature.properties.ada + "</b><br>" +
+        'Relevant Damage: ' + feature.properties.damages + "</b><br>" +
+        'Relevant Messes: ' + feature.properties.messes + "</b><br>" +
+        'Relevant Shortages: ' + feature.properties.supplyshortages + "</b><br>" +
+        'Last Updated: ' + feature.properties.updatedate
     );
 }
 
