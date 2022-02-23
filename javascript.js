@@ -25,7 +25,7 @@ var sqlQuery = "SELECT * FROM lafisher_l7_restrooms";
 
 function addPopup(feature, layer) {
     layer.bindPopup(
-        "<b>" + 'Restroom Type: ' + feature.properties.restroomtype + "</b><br>" +
+        'Restroom Type: ' + feature.properties.restroomtype + "<br>" +
         'Restroom Gender: ' + feature.properties.gendersurveyed + "</b><br>" +
         'Price in $: ' + feature.properties.entryprice + "</b><br>" +
         'Out of Order: ' + feature.properties.outoforder + "</b><br>" +
